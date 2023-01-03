@@ -37,3 +37,11 @@
   margin: 40px auto;
   padding: 20px;
 }
+.clicables {
+  padding: 12px;
+  border-radius: 10px;
+  margin-right: 5px;
+  background: #f1356d;
+  color: #fff;
+  border: none;
+}
