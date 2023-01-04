@@ -6,6 +6,12 @@ const Home = () => {
     const [name, setName] = useState("Trevor");
     const [age, setAge] = useState(27);
 
+    const [blogs, setBlogs] = useState([
+        { title: "My new Website", body: "This is soooooo amaizing", author: "Trevor", id: 1 },
+        { title: "My very awesome App", body: "This is soooooo cool", author: "Morris", id: 2 },
+        { title: "My first apple app", body: "This is soooooo insane", author: "Arapu", id: 3 }
+    ]);
+
 
     const handleClick = (e) => {
         console.log('warap', e)
@@ -28,7 +34,14 @@ const Home = () => {
             <button className = "clicables" onClick = {(e) => {
                 handleClick2("Trevor", e)
             }}> Click Two </button>
-        </div>
+
+            {blogs.forEach((blog) => {
+                <div className = "blog-preview" key={blog.id} >
+                    <h2>{ blog.title }</h2>
+                    <p>Written by { blog.author }</p>
+                </div>  
+            })}
+        </div> 
     );
 }
  
